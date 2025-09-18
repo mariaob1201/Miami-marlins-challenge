@@ -1,3 +1,9 @@
+# https://towardsdatascience.com/using-bayesian-modeling-to-predict-the-champions-league-8ebb069006ba/
+# https://academic.oup.com/jrsssa/article/187/2/513/7512935
+# https://github.com/alan-turing-institute/pymc3
+
+# start with arima model first
+
 import pymc as pm
 import numpy as np
 import pandas as pd
