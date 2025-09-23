@@ -7,4 +7,4 @@
 1_Data/.DS_StoreData/exit_velo_project_data.csv
 3_Modeling/uncertainty_quantification/outputs/*.csv
 1_Data/exit_velo_project_data.csv
-final/__pycache__/
+final_deprecated/__pycache__/

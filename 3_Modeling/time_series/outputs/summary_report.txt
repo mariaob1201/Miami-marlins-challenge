@@ -1,0 +1,25 @@
+
+PREDICTION SUMMARY REPORT
+========================
+
+Basic Statistics:
+- Total predictions: 3,624
+- Unique batters: 1,208
+- ARIMAX predictions: 3,624
+- Fallback predictions: 0
+
+Forecast Statistics:
+- Average forecast: 86.3 mph
+- Standard deviation: 51.5 mph
+- Range: [-1662.0, 1673.9] mph
+
+Method Breakdown:
+method
+ARIMAX(0, 0, 0)    3612
+ARIMAX(0, 0, 1)      12
+
+Target Level Breakdown:
+target_level_2024
+AA     1208
+AAA    1208
+MLB    1208

@@ -450,7 +450,7 @@ if __name__ == "__main__":
     print("🚀 Starting Markdown to HTML conversion with Python execution")
     print("=" * 60)
 
-    md_path = Path("final/summary.md")
+    md_path = Path("final_deprecated/summary.md")
     success = convert_md_with_execution(md_path)
 
     if success:

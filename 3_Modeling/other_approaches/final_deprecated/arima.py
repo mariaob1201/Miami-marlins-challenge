@@ -13,6 +13,29 @@ from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tools.sm_exceptions import ConvergenceWarning
 import pmdarima as pm
 
+
+def analyze_time_series_properties(player_data):
+    """
+    Analyze time series properties of exit velocity data
+    """
+    # Calculate lag-1 autocorrelation
+    correlations = []
+    for player_id in player_data['batter_id'].unique():
+        player_ts = player_data[player_data['batter_id'] == player_id]['exit_velo'].values
+        if len(player_ts) > 1:
+            correlation = np.corrcoef(player_ts[:-1], player_ts[1:])[0, 1]
+            if not np.isnan(correlation):
+                correlations.append(correlation)
+
+    return correlations
+
+
+####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
 # ----------------------------
 # Constants / helpers
 # ----------------------------
@@ -220,11 +243,11 @@ def validate_auto_arimax(y: pd.Series, X: pd.DataFrame,
 
 
 def choose_arimax(y: pd.Series, X: pd.DataFrame,
-                  min_initial_years: int = 5,
+                  min_initial_years: int = 1,
                   cv_horizon: int = 1) -> Dict[str, Any]:
     n = len(y)
     max_allowed_initial = n - cv_horizon - 1
-    adaptive_initial = max(3, min(min_initial_years, max_allowed_initial)) if max_allowed_initial >= 3 else None
+    adaptive_initial = max(2, min(min_initial_years, max_allowed_initial)) if max_allowed_initial >= 2 else None
 
     if adaptive_initial is not None:
         scores = validate_auto_arimax(y, X, initial=adaptive_initial, horizon=cv_horizon)
@@ -658,7 +681,7 @@ if __name__ == "__main__":
         la_col="launch_angle",
         spray_col="spray_angle",
         target_level_mode="all",
-        min_initial_years=5,
+        min_initial_years=1,
         output_csv="3_Modeling/time_series/outputs/per_batter_2024_arimax.csv"
     )
 
