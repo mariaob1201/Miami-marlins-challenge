@@ -8,3 +8,6 @@
 3_Modeling/uncertainty_quantification/outputs/*.csv
 1_Data/exit_velo_project_data.csv
 final_deprecated/__pycache__/
+__pycache__/
+*.nc
+3_Modeling/hierarchical/outputs/idata.nc

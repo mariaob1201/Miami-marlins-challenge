@@ -1,0 +1,18 @@
+HIERARCHICAL EXIT-VELOCITY MODEL  -  2024 MLB ABILITY PROJECTIONS
+================================================================
+Target batters projected : 647
+  with history           : 641
+  cold-start (pooled)    : 6
+
+Projected EV (mph): mean 87.61, range [78.8, 94.6]
+Mean 95% interval width: 3.34 mph
+
+Estimated level equivalencies (mph vs MLB):
+  AAA: +1.21 [+1.09, +1.33]
+  AA : +1.22 [+1.06, +1.38]
+
+Between-batter SD (sigma_batter): 3.78 mph
+Season noise   (sigma_season)  : 1.28 mph
+Age curve: linear -0.096, quad -0.0130
+
+Convergence: max R-hat = 1.032 (CHECK)
