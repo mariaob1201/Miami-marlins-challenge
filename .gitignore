@@ -9,5 +9,6 @@
 1_Data/exit_velo_project_data.csv
 final_deprecated/__pycache__/
 __pycache__/
+3_Modeling/hierarchical/__pycache__
 *.nc
 3_Modeling/hierarchical/outputs/idata.nc
