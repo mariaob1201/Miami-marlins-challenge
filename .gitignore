@@ -12,3 +12,9 @@ __pycache__/
 3_Modeling/hierarchical/__pycache__
 *.nc
 3_Modeling/hierarchical/outputs/idata.nc
+
+# LaTeX build (PDF is committed at repo root)
+4_Report/report.pdf
+*.aux
+*.log
+*.out
